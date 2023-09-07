@@ -1,6 +1,21 @@
 # blocked
 
-List blocked threads in Linux
+List blocked threads in Linux.
+
+- `./blocked '*'` lists all thread states
+- `./blocked '?'` only lists threads with unknown (to `blocked` program) states (usually there should be none)
+- `./blocked R` lists running threads
+- `./blocked DR` lists running and blocked threads
+- `./blocked D R` same
+
+
+and so on.  For a complete list of states see:
+
+- `man procfs`
+  - however it may be a bit incomplete, like on Ubuntu 22.04
+- <https://manpages.debian.org/latest/manpages/procfs.5.en.html>
+  - look for `(3) state`
+
 
 ## Usage
 
@@ -8,12 +23,6 @@ List blocked threads in Linux
 	cd blocked
 	make
 	./blocked
-
-Also
-
-	./blocked X
-
-where X is a state you want to list.
 
 
 ## Output
