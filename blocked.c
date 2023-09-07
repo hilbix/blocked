@@ -129,7 +129,10 @@ main(int argc, char **argv)
 
   if (argc<2)							/* use '' to not output states	*/
     want['D'] |= 2;						/* default: 'D' (blocked)	*/
-  if (want['?'])						/* ? list all unknown states	*/
+  if (want['*'])						/* * list all states	*/
+    for (int s=256; --s>=0; )
+      want[s] |= 8;
+  else if (want['?'])						/* ? list all unknown states	*/
     for (int s=256; --s>=0; )
       {
         const struct states *st;
@@ -138,9 +141,6 @@ main(int argc, char **argv)
         if (!st->c)
           want[s] |= 4;
       }
-  if (want['*'])						/* * list all states	*/
-    for (int s=256; --s>=0; )
-      want[s] |= 8;
 
   /* find the states	*/
 
