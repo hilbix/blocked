@@ -1,3 +1,5 @@
+[![blocked Build Status](https://api.cirrus-ci.com/github/hilbix/blocked.svg?branch=master)](https://cirrus-ci.com/github/hilbix/blocked/master)
+
 # blocked
 
 List blocked threads in Linux.
