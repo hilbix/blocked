@@ -132,7 +132,7 @@ main(int argc, char **argv)
   if (want['?'])						/* ? list all unknown states	*/
     for (int s=256; --s>=0; )
       {
-        struct states *st;
+        const struct states *st;
 
         st	= getstate(s);
         if (!st->c)
