@@ -1,0 +1,7 @@
+container:
+  image: gcc:latest
+
+task:
+  apt-state: apt -y install dietlibc-dev
+  compile-script: make
+
