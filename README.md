@@ -15,6 +15,22 @@ Also
 
 where X is a state you want to list.
 
+## Output
+
+STDOUT (in `/proc/`-order):
+
+- State
+- PID
+- Optional: TaskID
+- Process-name in `(`parenthesis`)`
+
+STDERR (in alphabetical order):
+
+- State
+- Count
+- Description
+  - Old states in `[`brackets`]`
+
 
 ## FAQ
 
