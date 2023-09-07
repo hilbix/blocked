@@ -15,6 +15,7 @@ Also
 
 where X is a state you want to list.
 
+
 ## Output
 
 STDOUT (in `/proc/`-order):
@@ -30,6 +31,15 @@ STDERR (in alphabetical order):
 - Count
 - Description
   - Old states in `[`brackets`]`
+
+
+## Notes
+
+`Makefile` uses `diet` to compile it into a staticlly linked binary.
+
+- `sudo apt install dietlibc-dev`
+- For `amd64` I see a 23 KB stripped binary
+- Dynamically compiled it still took 13 KB, so less than 10 KB overhead
 
 
 ## FAQ
