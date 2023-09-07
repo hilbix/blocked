@@ -2,6 +2,6 @@ container:
   image: gcc:latest
 
 task:
-  apt-script: apt -y install dietlibc-dev
+  apt-script: apt-get update && apt-get -y install dietlibc-dev
   compile-script: make
 
